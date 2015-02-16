@@ -1,0 +1,17 @@
+{
+  "name": "game client",
+  "version": "1",
+  "dependencies": {
+    "angular": "latest",
+    "lesshat": "latest",
+    "angular-ui-router": "latest",
+    "phaser": "latest",
+    "ionicons": "latest",
+    "jquery": "latest",
+    "lodash": "latest",
+    "angular-socket-io": "latest",
+    "ngDialog": "latest",
+    "font-awesome": "latest",
+    "bootstrap-sass-official": "~3.3.3"
+  }
+}

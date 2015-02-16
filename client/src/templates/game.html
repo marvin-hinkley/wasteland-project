@@ -1,0 +1,62 @@
+---
+name: game
+controller: GameController
+url: /game
+---
+
+<div class="grid-block vertical">
+    <zf-panel id="character-panel" position="top">
+        <div id="character-panel-inner-wrap" class="grid-block shrink">
+<!--            <div class="grid-block character-panel-section">-->
+                <div class="grid-content character-panel-section">
+                    <img ng-src="assets/img/no-avatar.png" width="90" height="90">
+                    <p>{{character.name}}</p>
+                </div>
+<!--            </div>-->
+<!--            <div class="grid-block character-panel-section">-->
+                <div class="grid-content character-panel-section">
+                    <ul>
+                        <li>HP:<span class="stat">{{character.health}}</span></li>
+                        <li>Int:<span class="stat">{{character.intelligence}}</span></li>
+                        <li>Agi:<span class="stat">{{character.agility}}</span></li>
+                    </ul>
+                </div>
+<!--            </div>-->
+<!--            <div class="grid-block character-panel-section">-->
+                <div class="grid-content character-panel-section">
+                    <ul>
+                        <li>HP:<span class="stat">{{character.health}}</span></li>
+                        <li>Int:<span class="stat">{{character.intelligence}}</span></li>
+                        <li>Agi:<span class="stat">{{character.agility}}</span></li>
+                    </ul>
+                </div>
+<!--            </div>-->
+        </div>
+    </zf-panel>
+</div>
+<a href="#" zf-open="character-panel">
+    <div class="grid-block shrink text-left panel-handle">
+        <p><img ng-src="assets/img/no-avatar.png" width="30" height="30"> {{character.name}}'s Character Details</p>
+    </div>
+</a>
+<div class="grid-block vertical">
+    <game-window class="medium-12 large-12 grid-content vertical text-center "></game-window>
+</div>
+<a href="#" zf-toggle="chat-panel" class="text-center">
+    <div class="grid-block shrink text-center panel-handle">
+        <p>Chat Panel</p>
+    </div>
+</a>
+<zf-panel id="chat-panel" position="bottom" class="medium-grid-block large-grid-block medium-12 large-12 text-center shrink panel-fixed vertical">
+    <div class="grid-content vertical">
+        <p>chat message window</p>
+    </div>
+    <div class="grid-content vertical">
+        <form ng-submit="sendChat()">
+            <span class="inline-label">
+                <input ng-model="chatMessage.content" type=text placeholder="Chat . . . ">
+                <button type="submit">send</button>
+            </span>
+        </form>
+    </div>
+</zf-panel>
